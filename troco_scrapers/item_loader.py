@@ -3,7 +3,7 @@ from scrapy.loader.processors import TakeFirst, MapCompose, Join, Identity
 
 def clean(item):
     if isinstance(item, basestring):
-        return item.strip(" \"-!@#$%^&*<>,.")
+        return item.strip(" \"\n\r\t-!@#$%^&*<>,.")
     return item
 
 class Loader(ItemLoader):

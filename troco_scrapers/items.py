@@ -12,6 +12,8 @@ from scrapy.loader.processors import Identity
 class house(scrapy.Item):
     # define the fields for your item here like:
     title = scrapy.Field()
+    owner_name = scrapy.Field()
+    link = scrapy.Field()
     description = scrapy.Field(output_processor = Identity())
     sleeps = scrapy.Field()
     bedrooms = scrapy.Field()
@@ -21,6 +23,7 @@ class house(scrapy.Item):
     suitability = scrapy.Field(output_processor = Identity())
     images = scrapy.Field(output_processor = Identity())
     amenities = scrapy.Field(output_processor = Identity())
+    location = scrapy.Field(output_processor = Identity())
     pass
 
 
