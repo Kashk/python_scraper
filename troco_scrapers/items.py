@@ -27,3 +27,6 @@ class house(scrapy.Item):
     pass
 
 
+class amenity(scrapy.Item):
+    name = scrapy.Field(output_processor = Identity())
+    description = scrapy.Field(output_processor = Identity())
