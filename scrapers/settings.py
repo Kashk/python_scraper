@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for troco_scrapers project
+# Scrapy settings for scrapers project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -11,10 +11,10 @@
 
 import random
 
-BOT_NAME = 'troco_scrapers'
+BOT_NAME = 'scrapers'
 
-SPIDER_MODULES = ['troco_scrapers.spiders']
-NEWSPIDER_MODULE = 'troco_scrapers.spiders'
+SPIDER_MODULES = ['scrapers.spiders']
+NEWSPIDER_MODULE = 'scrapers.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -53,27 +53,27 @@ DOWNLOAD_DELAY=0.2
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'troco_scrapers.middlewares.MyCustomSpiderMiddleware': 543,
+#    'scrapers.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'troco_scrapers.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'scrapers.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
 EXTENSIONS = {
-    'troco_scrapers.extensions.dropped_item.StoreDroppedItems': 300,
+    'scrapers.extensions.dropped_item.StoreDroppedItems': 300,
 }
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'troco_scrapers.pipelines.validator.Validator': 300,
-    'troco_scrapers.pipelines.formatter.Format': 400,
-    'troco_scrapers.pipelines.persist.Persist': 500,
+    'scrapers.pipelines.validator.Validator': 300,
+    'scrapers.pipelines.formatter.Format': 400,
+    'scrapers.pipelines.persist.Persist': 500,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

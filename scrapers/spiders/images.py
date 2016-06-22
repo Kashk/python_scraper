@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*- 
 import scrapy 
-from troco_scrapers.item_loader import Loader
+from scrapers.item_loader import Loader
 from pyvirtualdisplay import Display 
 from selenium import webdriver
-from troco_scrapers.items import * 
+from scrapers.items import * 
 from homeaway import HomeawaySpider
-from troco_scrapers.database.tables import *
+from scrapers.database.tables import *
 
 class ImagesSpider(HomeawaySpider):
     name = "images"

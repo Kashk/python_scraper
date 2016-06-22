@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*- 
-from troco_scrapers.database.tables import *
+from scrapers.database.tables import *
 
 class Persist(object):
     def process_item(self, item, spider):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*- 
 import scrapy 
-from troco_scrapers.item_loader import Loader
+from scrapers.item_loader import Loader
 from pyvirtualdisplay import Display 
 from selenium import webdriver
-from troco_scrapers.items import * 
+from scrapers.items import * 
 
 class HomeawaySpider(scrapy.Spider):
     name = "discover_new_properties"
@@ -119,13 +119,8 @@ class HomeawaySpider(scrapy.Spider):
         # self.driver = webdriver.Chrome()
         # self.driver.set_window_size(1440, 863)
 
-#url1 0 to 500000
-#url1 and 2 5000000 to 600000
-#url1 and 2 6000000 to 700000
-#url1 and 2 7000000 to 800000
-
     def start_requests(self):
-        for num in range(700000, 800000):
+        for num in range(1, 800000):
             yield scrapy.Request(self.url1 % num, meta = {'dont_redirect': True})
             yield scrapy.Request(self.url2 % num, meta = {'dont_redirect': True})
 
